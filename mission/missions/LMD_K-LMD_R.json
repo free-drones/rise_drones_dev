@@ -1,0 +1,26 @@
+{
+	"id0": {
+		"lat": 58.32965391,
+		"lon": 15.64059757,
+		"alt": 10,
+		"heading": -1,
+		"speed": 1
+	},
+	"id1": {
+		"lat": 58.32984944,
+		"lon": 15.6411429,
+		"alt": 10,
+		"heading": -1,
+		"speed": 1
+	},
+
+	"id2": {
+		"lat": 58.3294213,
+		"lon": 15.6407318,
+		"alt": 10,
+		"heading": -1,
+		"speed": 1
+	},
+	"source_file": "Missions/kolbyttan_lmd.plan-MODIFIED",
+	"route": "LMD_L-LMD_K"
+}

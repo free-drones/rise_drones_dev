@@ -1,0 +1,5 @@
+{
+  "name": "GLANA: Glutta Me Glana",
+  "script_path": "/home/pi/companion_computer/start_scripts/glutta_me_glana.sh",
+  "description": "Starting glutta_me_glana.py"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "DSS: Smart RTL",
+  "script_path": "/home/pi/companion_computer/start_scripts/dss_srtl.sh",
+  "description": "DSS Smart RTL"
+}

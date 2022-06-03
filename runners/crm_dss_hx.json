@@ -1,0 +1,5 @@
+{
+  "name": "DSS: crm_dss HX_00X",
+  "script_path": "/home/pi/companion_computer/start_scripts/crm_dss_hx_00x.sh",
+  "description": "Starting CRM compatible DSS on HX_00X"
+}

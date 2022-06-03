@@ -1,0 +1,5 @@
+{
+  "name": "APP: App verify",
+  "script_path": "/home/pi/companion_computer/start_scripts/app_verify.sh",
+  "description": "Run application App Verify"
+}

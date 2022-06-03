@@ -1,0 +1,5 @@
+{
+  "name": "DSS: run_dss --with-gcs",
+  "script_path": "/home/pi/companion_computer/start_scripts/run_dss-with-gcs.sh",
+  "description": "Starting DSS service with GCS heartbeats"
+}

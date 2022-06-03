@@ -1,0 +1,5 @@
+{
+  "name": "DSS: run_dss --with-rangefinder",
+  "script_path": "/home/pi/companion_computer/start_scripts/run_dss-with-rangefinder.sh",
+  "description": "Starting DSS service"
+}

@@ -1,0 +1,25 @@
+{
+	"id0": {
+		"lat": 58.32959874,
+		"lon": 15.63942825,
+		"alt": 10,
+		"heading": -1,
+		"speed": 2
+	},
+	"id1": {
+		"lat": 58.32980716,
+		"lon": 15.63999687,
+		"alt": 10,
+		"heading": -1,
+		"speed": 2
+	},
+	"id2": {
+		"lat": 58.3296,
+		"lon": 15.6405,
+		"alt": 10,
+		"heading": -1,
+		"speed": 2
+	},
+	"source_file": "Missions/KolbyttmonP_GLANA-test.plan",
+	"route": "KolbyttemomP_GLANA-test"
+}

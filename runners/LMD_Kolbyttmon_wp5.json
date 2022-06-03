@@ -1,0 +1,5 @@
+{
+  "name": "LMD: Kolbyttemon wp5",
+  "script_path": "/home/pi/companion_computer/start_scripts/LMD_Kolbyttemon_wp5.sh",
+  "description": "Starting LMD_kolbyttemon at wp5"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "LUM: Set Exposure Time and Gain",
+  "script_path": "ssh drone@jxt '/home/drone/workspace/scripts/set_exp.sh' ",
+  "description": "Set exposure time and Gain for Glana camera."
+}

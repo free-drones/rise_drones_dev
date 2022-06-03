@@ -1,0 +1,25 @@
+{
+	"id0": {
+		"lat": 57.778949767835755,
+		"lon": 16.523966705198973,
+		"alt": 50,
+		"heading": -1,
+		"speed": 5
+	},
+	"id1": {
+		"lat": 57.77646641800701,
+		"lon": 16.526468531620537,
+		"alt": 50,
+		"heading": -1,
+		"speed": 7
+	},
+	"id2": {
+		"lat": 57.7768153,
+		"lon": 16.5283082,
+		"alt": 20,
+		"heading": -1,
+		"speed": 5
+	},
+	"source_file": "Missions/LMD_B.plan",
+	"route": "LMD_B-LMD_R"
+}

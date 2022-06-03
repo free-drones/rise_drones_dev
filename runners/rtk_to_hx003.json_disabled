@@ -1,0 +1,5 @@
+{
+  "name": "RTK: stream to HX_003",
+  "script_path": "/home/pi/companion_computer/start_scripts/send_rtk_hx003.sh",
+  "description": "Send RTK data to HX_003"
+}

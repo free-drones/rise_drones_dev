@@ -1,0 +1,5 @@
+{
+  "name": "GLANA: Glana-Service",
+  "script_path": "/home/pi/companion_computer/start_scripts/camera_start.sh",
+  "description": "Start glana-service on JXT"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "GIT: git pull",
+  "script_path": "/home/pi/companion_computer/start_scripts/git_pull.sh",
+  "description": "Git pull on current branch"
+}

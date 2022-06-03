@@ -1,0 +1,5 @@
+{
+  "name": "LUM: Auto Set Gain",
+  "script_path": "/home/pi/companion_computer/start_scripts/auto_set.sh",
+  "description": "Auto Set Gain for Glana camera."
+}

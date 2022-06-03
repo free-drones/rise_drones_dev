@@ -1,0 +1,5 @@
+{
+  "name": "LUM: Take and show image",
+  "script_path": "/home/pi/companion_computer/start_scripts/show_pic.sh",
+  "description": "Take and show picture from Glana camera"
+}

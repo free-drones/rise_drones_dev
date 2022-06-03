@@ -1,0 +1,5 @@
+{
+  "name": "MAV: Mavproxy on ACM1",
+  "script_path": "/home/pi/companion_computer/start_scripts/mavproxy_start_acm1.sh",
+  "description": "Start MAVProxy on /dev/ttyACM1"
+}

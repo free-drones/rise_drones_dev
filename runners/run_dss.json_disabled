@@ -1,0 +1,5 @@
+{
+  "name": "DSS: run_dss",
+  "script_path": "/home/pi/companion_computer/start_scripts/run_dss.sh",
+  "description": "Starting DSS service"
+}

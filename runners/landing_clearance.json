@@ -1,0 +1,5 @@
+{
+  "name": "DSS: Landing clearance",
+  "script_path": "/home/pi/companion_computer/start_scripts/landing_clearance.sh",
+  "description": "Send Clearance to LAND"
+}

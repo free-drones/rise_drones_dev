@@ -1,0 +1,5 @@
+{
+  "name": "JoL12_lla",
+  "script_path": "/home/pi/companion_computer/start_scripts/JoL12_lla.sh",
+  "description": "Loading JoL12 mission"
+}
