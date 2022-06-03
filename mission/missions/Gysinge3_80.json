@@ -1,0 +1,226 @@
+{
+    "id0": {
+        "tracking_precision": 5,
+        "lat": 60.270070787107684,
+        "lon": 17.16135160724907,
+        "heading": "course",
+        "speed": 5,
+        "alt": 200.0
+    },
+    "id1": {
+        "tracking_precision": 5,
+        "lat": 60.267188541903536,
+        "lon": 17.16135158302107,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id2": {
+        "tracking_precision": 5,
+        "lat": 60.26718772556698,
+        "lon": 17.161714244838446,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id3": {
+        "tracking_precision": 5,
+        "lat": 60.27006962013741,
+        "lon": 17.16171430100491,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id4": {
+        "tracking_precision": 5,
+        "lat": 60.27006845217841,
+        "lon": 17.162076994734868,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id5": {
+        "tracking_precision": 5,
+        "lat": 60.26718690824184,
+        "lon": 17.16207690663771,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id6": {
+        "tracking_precision": 5,
+        "lat": 60.26718608992805,
+        "lon": 17.16243956841885,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id7": {
+        "tracking_precision": 5,
+        "lat": 60.27006728323069,
+        "lon": 17.162439688438923,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id8": {
+        "tracking_precision": 5,
+        "lat": 60.27006611329427,
+        "lon": 17.16280238211705,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id9": {
+        "tracking_precision": 5,
+        "lat": 60.267185270625696,
+        "lon": 17.16280223018184,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id10": {
+        "tracking_precision": 5,
+        "lat": 60.26718445033469,
+        "lon": 17.16316489192666,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id11": {
+        "tracking_precision": 5,
+        "lat": 60.27006494236916,
+        "lon": 17.163165075769232,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id12": {
+        "tracking_precision": 5,
+        "lat": 60.270063770455316,
+        "lon": 17.16352776939544,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id13": {
+        "tracking_precision": 5,
+        "lat": 60.267183629055076,
+        "lon": 17.16352755365329,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id14": {
+        "tracking_precision": 5,
+        "lat": 60.26718280678687,
+        "lon": 17.163890215361697,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id15": {
+        "tracking_precision": 5,
+        "lat": 60.27006259755279,
+        "lon": 17.16389046299566,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id16": {
+        "tracking_precision": 5,
+        "lat": 60.27006142366152,
+        "lon": 17.16425315656987,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id17": {
+        "tracking_precision": 5,
+        "lat": 60.26718198353005,
+        "lon": 17.16425287705188,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id18": {
+        "tracking_precision": 5,
+        "lat": 60.26718115928458,
+        "lon": 17.16461553872379,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id19": {
+        "tracking_precision": 5,
+        "lat": 60.27006024878156,
+        "lon": 17.16461585011804,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id20": {
+        "tracking_precision": 5,
+        "lat": 60.270059072912915,
+        "lon": 17.164978543640153,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id21": {
+        "tracking_precision": 5,
+        "lat": 60.267180334050565,
+        "lon": 17.16497820037743,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id22": {
+        "tracking_precision": 5,
+        "lat": 60.267179507827905,
+        "lon": 17.16534086201277,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id23": {
+        "tracking_precision": 5,
+        "lat": 60.27005789605553,
+        "lon": 17.16534123713619,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id24": {
+        "tracking_precision": 5,
+        "lat": 60.27005671820943,
+        "lon": 17.165703930606128,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id25": {
+        "tracking_precision": 5,
+        "lat": 60.26717868061662,
+        "lon": 17.165703523629784,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id26": {
+        "tracking_precision": 5,
+        "lat": 60.26717785241673,
+        "lon": 17.166066185228445,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    },
+    "id27": {
+        "tracking_precision": 5,
+        "lat": 60.27005553937465,
+        "lon": 17.16606662404994,
+        "heading": "course",
+        "speed": 5.0,
+        "alt": 200.0
+    }
+}
