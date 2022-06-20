@@ -19,17 +19,13 @@ class MODEM:
     def __init__(self, tty_name):
         self.ser = serial.Serial()
         self.ser.port = tty_name
-        #print(self.ser.port)
-        # If it breaks try the below
-        #self.serConf() # Uncomment lines here till it works
-        self.ser.timeout = 0.01 # seconds
-        self.ser.baudrate = 115200 # baudrate
+        self.ser.timeout = 0.01     # readline timeout in seconds
+        self.ser.baudrate = 115200  # baudrate
         self.ser.open()
         self.ser.flushInput()
         self.ser.flushOutput()
-        #self.addr = None
-        #self.setAddress(0)
 
+        # AT command convenience table
         self._commands =   {
                             # Static info
                             'hardware':             'ATI',
@@ -57,10 +53,14 @@ class MODEM:
                             # Not working..
                             'hsdpa':                'AT+QCFG="hsdpacat',
                             'hsupa':                'AT+QCFG="hsupacat'}
-        self.set_modem('network_reg_set_opt2')
+        # Set modem to provide to cell_ID
+        if self.set_modem('network_reg_set_opt2'):
+            print("Modem set to report Cell-ID on request")
+        else:
+            print("WARNING: Modem set to report Cell-ID on request FAILED")
 
-    # Send specified AT command
-    def send_command(self, cmd_str):
+    # Send specified AT command and return answer(s)
+    def send_at_command(self, cmd_str):
         cmd = cmd_str + "\r\n"
         self.ser.write(cmd.encode())
         answers = []
@@ -72,7 +72,6 @@ class MODEM:
             if self.is_empty_line(answer):
                 # Discard empty line
                 continue
-
             # Decode bytes to string
             decoded = answer.decode()
             # Clean trailing carriage return and newlines
@@ -93,6 +92,7 @@ class MODEM:
         self.ser.write(cmd.encode())
         answers = []
         attempts = 1
+        # Send command and read answer until timeout
         while True:
             answer = self.ser.readline()
             if self.is_timeout(answer):
@@ -105,12 +105,15 @@ class MODEM:
                     print("No response within timeout, try again. Attempts: ", attempts)
                     attempts += 1
                     continue
+                # Complete response is already received
                 break
+            # Discard empty lines
             if self.is_empty_line(answer):
-                # Discard empty line
                 continue
+            # Print to stdout on receiving ERROR
             if self.is_error(answer):
                 print("Received ERROR when sending ", self._commands[key])
+            # Discart 'OK' from answer
             if self.is_ok(answer):
                 # Dont log th 'OK'
                 continue
@@ -130,7 +133,7 @@ class MODEM:
         else:
             # create exception..
             print("key not recognized:" , key)
-            return []
+            return False
         self.ser.write(cmd.encode())
         answers = []
         attempts = 1
@@ -146,43 +149,40 @@ class MODEM:
                     print("No response within timeout, try again. Attempts: ", attempts)
                     attempts += 1
                     continue
+                # Complete response is already received
                 break
+            # Discard empty lines
             if self.is_empty_line(answer):
-                # Discard empty line
                 continue
+            # If 'ERROR'
             if self.is_error(answer):
-                print("Received ERROR when sending ", self._commands[key])
-            # Decode bytes to string
-            decoded = answer.decode()
-            # Clean trailing carriage return and newlines
-            decoded = decoded.rstrip('\r\n')
-            # Append to answer list
-            answers.append(decoded)
-        if answers[len(answers)-1] == 'OK':
-            print("Modem set: ", key)
-        elif answers[len(answers)-1] == 'ERROR':
-            print("Modem was not set ", key)
-        else:
-            print("There was some issue with setting key: ", key)
-        return
+                return False
+            # If 'OK'
+            elif self.is_ok(answer):
+                return True
+            else:
+                return False
 
+    # Test for timeout answer
     def is_timeout(self, bytes):
         return b'' == bytes
 
+    # Test for carriage return and newline with no data
     def is_empty_line(self, bytes):
         return b'\r\n' == bytes
 
+    # Test for 'ERROR'
     def is_error(self, bytes):
         return b'ERROR\r\n' == bytes
 
+    # Test for 'OK'
     def is_ok(self, bytes):
         return b'OK\r\n' == bytes
 
+    # Test AT command and print answer
     def test(self, cmd):
         answer = self.get_info(cmd)
         print(answer)
-        #splitted = answer[0].split(',')
-        #print(splitted[len(splitted) -1])
 
     def test_sequence(self):
         print("Static (?) information")
@@ -212,6 +212,7 @@ class MODEM:
         self.test('registered_network')
         self.test('service_profile')
 
+    # Setup serial, not used for now
     def serConf(self):
         self.ser.baudrate = 9600
         self.ser.bytesize = serial.EIGHTBITS
@@ -223,9 +224,11 @@ class MODEM:
         self.ser.dsrdtr = False # Disable (DSR/DTR) flow Control
         self.ser.writeTimeout = 2
 
+    # Close serial
     def close(self):
         self.ser.close()
 
+    # Main
     def main(self):
         self.test_sequence()
 
@@ -252,12 +255,6 @@ def _main():
   except:
     print("Something bad happened")
     print(traceback.format_exc())
-#   except dss.auxiliaries.exception.NoAnswer:
-#     _logger.error('Failed to instantiate application: Probably the CRM couldn\'t be reached')
-#     sys.exit()
-#   except:
-#     _logger.error('Failed to instantiate application\n%s', traceback.format_exc())
-#     sys.exit()
 
 #--------------------------------------------------------------------#
 if __name__ == '__main__':
