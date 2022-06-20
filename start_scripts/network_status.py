@@ -1,14 +1,5 @@
 #!/usr/bin/python3
 
-
-# import os
-
-# with open('/etc/ttyUSB2', 'w') as tty:
-#   print('at+GSN\r', file=tty)
-
-
-#  printf 'at+GSN\r' > /dev/ttyUSB2
-
 import argparse
 import serial
 import sys
