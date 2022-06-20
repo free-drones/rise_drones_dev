@@ -31,6 +31,8 @@ class MODEM:
                             'hardware':             'ATI',
                             'imsi':                 'AT+CIMI',
                             'imei':                 'AT+GSN',
+                            'my_number':            'AT+CNUM',
+                            'ccid':                 'AT+QCCID',
                             'current_operator':     'AT+COPS?',
                             'preferred_operator':   'AT+CPOL?',
                             'icci':                 'AT+QCCID',
@@ -191,6 +193,8 @@ class MODEM:
         self.test('imsi')
         print("imei")
         self.test('imei')
+        self.test('my_number')
+        self.test('ccid')
         self.test('current_operator')
         #self.test('preferred_operator')
         self.test('icci')
