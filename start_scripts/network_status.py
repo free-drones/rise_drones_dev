@@ -193,10 +193,9 @@ class MODEM:
         print("imei")
         self.test('imei')
         self.test('my_number')
-        self.test('ccid')
+        self.test('iccid')
         self.test('current_operator')
         #self.test('preferred_operator')
-        self.test('icci')
         self.test('local_time')
 
         self.test('config')
