@@ -32,17 +32,23 @@ class MODEM:
                             'imsi':                 'AT+CIMI',
                             'imei':                 'AT+GSN',
                             'my_number':            'AT+CNUM',
-                            'iccid':                 'AT+QCCID',
+                            'iccid':                'AT+QCCID',
                             'current_operator':     'AT+COPS?',
                             'preferred_operator':   'AT+CPOL?',
                             'local_time':           'AT+CTZR?',
                             'config':               'AT+QCFG=?',
 
                             # Dynamic info
-                            'signal_quality':       'AT+CSQ',
+                            'sig_quality':          'AT+CSQ',
+                            'ext_signal_quality':   'AT+QSCQ',
+                            'sig_serving_cell':     'AT+QENG="servingcell"',
+                            'sig_neighbour_cell':   'AT+QENG="neighbourcell"',
+
+
                             'band':                 'AT+QCFG="band"',
                             'network_info':         'AT+QNWINFO',
-                            'network_reg_info':     'AT+CREG?',
+                            'network_reg':          'AT+CREG?',
+                            'network_reg_status':   'AT+CEREG?',
                             'registered_network':   'AT+QSPN',
                             'service_profile':      'AT+CGQREQ=?',
 
@@ -50,6 +56,8 @@ class MODEM:
                             'network_reg_set_opt0': 'AT+CREG=0',
                             'network_reg_set_opt1': 'AT+CREG=1',
                             'network_reg_set_opt2': 'AT+CREG=2', # Req for cell id
+                            'toggle_engineering_m': 'AT+QENG',
+                            'set_engineering_m':    'AT+QENG=1,3',
 
                             # Not working..
                             'hsdpa':                'AT+QCFG="hsdpacat',
@@ -201,10 +209,35 @@ class MODEM:
         self.test('config')
 
         print("\nDynamic information")
-        self.test('signal_quality')
+        self.test('sig_quality')
+        self.test('ext_signal_quality')
+        self.test('sig_serving_cell')
+        self.test('sig_neighbour_cell')
         self.test('band')
         self.test('network_info')
-        self.test('network_reg_info')
+        self.test('network_reg')
+        self.test('network_reg_status')
+
+        # Test these commands
+        print("Serving cell tests in different engineering modes")
+        self.test('sig_serving_cell')
+        print("Set engineering mode")
+        self.test('set_engineering_m')
+        self.test('sig_serving_cell')
+        print("toggle_engineering_mode")
+        self.test('toggle_engineering_m')
+        self.test('sig_serving_cell')
+        print("toggle_engineering_mode")
+        self.test('toggle_engineering_m')
+        self.test('sig_serving_cell')
+        print("toggle_engineering_mode")
+        self.test('toggle_engineering_m')
+        self.test('sig_serving_cell')
+        print("Set engineering mode")
+        self.test('set_engineering_m')
+        self.test('sig_serving_cell')
+
+
         #self.test('network_reg_info')
         # reg_info = self.get_info('network_reg_info')
         # data = reg_info[0].split(',')
