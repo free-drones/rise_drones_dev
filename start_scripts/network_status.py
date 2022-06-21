@@ -32,10 +32,9 @@ class MODEM:
                             'imsi':                 'AT+CIMI',
                             'imei':                 'AT+GSN',
                             'my_number':            'AT+CNUM',
-                            'ccid':                 'AT+QCCID',
+                            'iccid':                 'AT+QCCID',
                             'current_operator':     'AT+COPS?',
                             'preferred_operator':   'AT+CPOL?',
-                            'icci':                 'AT+QCCID',
                             'local_time':           'AT+CTZR?',
                             'config':               'AT+QCFG=?',
 
