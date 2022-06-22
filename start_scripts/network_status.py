@@ -57,6 +57,7 @@ class Modem:
                             'network_reg_set_opt0': 'AT+CREG=0',
                             'network_reg_set_opt1': 'AT+CREG=1',
                             'network_reg_set_opt2': 'AT+CREG=2', # Req for cell id
+                            'support_eng_mode':     'AT+QENG=?',
                             'toggle_engineering_m': 'AT+QENG',
                             'set_engineering_m':    'AT+QENG=1,3',
 
@@ -233,6 +234,7 @@ class Modem:
         print(answer)
 
     def test_sequence(self):
+        self.test('support_eng_mode')
         print("Static (?) information")
         self.test('hardware')
         print("imsi:")
