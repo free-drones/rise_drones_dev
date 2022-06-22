@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import json
 import argparse
 import serial
 import sys
@@ -15,7 +16,7 @@ __status__ = 'development'
 
 #--------------------------------------------------------------------#
 
-class MODEM:
+class Modem:
     def __init__(self, tty_name):
         self.ser = serial.Serial()
         self.ser.port = tty_name
@@ -67,6 +68,44 @@ class MODEM:
             print("Modem set to report Cell-ID on request")
         else:
             print("WARNING: Modem set to report Cell-ID on request FAILED")
+
+    # Parse responses into dict
+    def parse(self, cmd_str):
+        params = {}
+        answers = self.send_at_command(cmd_str)
+        if cmd_str == 'hardware':
+            # Check for correct lenght
+            if len(answers) == 2:
+                params['manufacturer'] = answers[0]
+                params['model'] = answers[1]
+                revision = answers[2].split(':')
+                params['revision'] = revision[1]
+
+        elif cmd_str == 'imsi':
+            # Check for correct lenght
+            if len(answers) == 0:
+                params['imsi'] = answers[0]
+
+        elif cmd_str == 'imei':
+            # Check for correct lenght
+            if len(answers) == 0:
+                params['imei'] = answers[0]
+
+        # elif cmd_str == 'my_number':
+        #     # Check for correct lenght
+        #     if len(answers) == 2:
+        # elif cmd_str == '':
+        #     # Check for correct lenght
+        #     if len(answers) == 2:
+
+
+
+        elif cmd_str == 'sig_serving_cell':
+            params['parsed'] = "ToDo"
+
+        elif cmd_str == 'sig_neighbor_cell':
+            params['parsed'] = "ToDo"
+        return params
 
     # Send specified AT command and return answer(s)
     def send_at_command(self, cmd_str):
@@ -247,6 +286,18 @@ class MODEM:
         self.test('registered_network')
         self.test('service_profile')
 
+    def parse_sequence(self):
+        hw = self.parse('hardware')
+        print(hw)
+        print(json.dumps(hw, ident = 4))
+        imsi = self.parse('imsi')
+        imei = self.parse('imei')
+
+        # Merge
+        res = {**hw, **imsi, *imei}
+        print(json.dumps(res, ident = 4))
+
+
     # Setup serial, not used for now
     def serConf(self):
         self.ser.baudrate = 9600
@@ -267,6 +318,9 @@ class MODEM:
     def main(self):
         self.test_sequence()
 
+        print("\n\nTesting parser")
+        self.parse_sequence()
+
         self.close()
 
 
@@ -275,7 +329,7 @@ def _main():
   # parse command-line arguments
   parser = argparse.ArgumentParser(description='APP "app_noise"', allow_abbrev=False, add_help=False)
   parser.add_argument('-h', '--help', action='help', help=argparse.SUPPRESS)
-  parser.add_argument('--tty', type=str, help='tty reference /etc/ttyXXX', required=True)
+  parser.add_argument('--tty', type=str, help='tty reference /dev/ttyXXX', required=True)
   args = parser.parse_args()
 
 
@@ -285,7 +339,7 @@ def _main():
   # Create the MODEM class
 
   try:
-    modem = MODEM(args.tty)
+    modem = Modem(args.tty)
     modem.main()
   except:
     print("Something bad happened")
