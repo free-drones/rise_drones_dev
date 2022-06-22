@@ -1,0 +1,333 @@
+{
+    "static_info": {
+        "date": "2022-06-22",
+        "time": "17:14:26",
+        "time-zone": "+08",
+        "manufacturer": "Quectel",
+        "model": "EC25",
+        "revision": "EC25EFAR06A04M4G",
+        "imsi": "240016034021569",
+        "imei": "866758045634140",
+        "number": "+46730715879"
+    },
+    "1": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-106",
+            "rsrq": "-15",
+            "raai": "-70",
+            "ainr": "-4",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-15",
+                "rsrp": "-106",
+                "rssi": "-69",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "1": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "396",
+                "rsrq": "-17",
+                "rsrp": "-108",
+                "rssi": "-81",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "2": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "473",
+                "rsrq": "-20",
+                "rsrp": "-113",
+                "rssi": "-81",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "17:14:26"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    },
+    "2": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-106",
+            "rsrq": "-15",
+            "raai": "-69",
+            "ainr": "-6",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-15",
+                "rsrp": "-106",
+                "rssi": "-73",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "1": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "396",
+                "rsrq": "-16",
+                "rsrp": "-108",
+                "rssi": "-82",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "2": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "134",
+                "rsrq": "-20",
+                "rsrp": "-119",
+                "rssi": "-82",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "17:14:28"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    },
+    "3": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-106",
+            "rsrq": "-16",
+            "raai": "-71",
+            "ainr": "-2",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-16",
+                "rsrp": "-106",
+                "rssi": "-69",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "1": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "396",
+                "rsrq": "-16",
+                "rsrp": "-108",
+                "rssi": "-83",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "2": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "134",
+                "rsrq": "-20",
+                "rsrp": "-115",
+                "rssi": "-83",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "3": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "473",
+                "rsrq": "-18",
+                "rsrp": "-110",
+                "rssi": "-83",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "17:14:29"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    },
+    "4": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-106",
+            "rsrq": "-16",
+            "raai": "-72",
+            "ainr": "-2",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-16",
+                "rsrp": "-106",
+                "rssi": "-72",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "1": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "396",
+                "rsrq": "-17",
+                "rsrp": "-108",
+                "rssi": "-81",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "2": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "134",
+                "rsrq": "-20",
+                "rsrp": "-117",
+                "rssi": "-81",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            },
+            "3": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "473",
+                "rsrq": "-17",
+                "rsrp": "-108",
+                "rssi": "-81",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "17:14:30"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    }
+}
