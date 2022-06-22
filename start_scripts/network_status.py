@@ -37,7 +37,6 @@ class Modem:
                             'iccid':                'AT+QCCID',
                             'current_operator':     'AT+COPS?',
                             'preferred_operator':   'AT+CPOL?',
-                            'local_time':           'AT+CTZR?',
                             'config':               'AT+QCFG=?',
 
                             # Get supported entities
@@ -54,20 +53,20 @@ class Modem:
                             'network_reg':          'AT+CREG?',
                             'network_reg_status':   'AT+CEREG?',
                             'registered_network':   'AT+QSPN',
+                            'time':                 'AT+QLTS=2',
+                            'date_time':           'AT+QLTS=2',
+
 
                             # Setters
                             'network_reg_set_opt0': 'AT+CREG=0',
                             'network_reg_set_opt1': 'AT+CREG=1',
                             'network_reg_set_opt2': 'AT+CREG=2', # Req for cell id
 
-
                             # Not working..
                             'hsdpa':                'AT+QCFG="hsdpacat',
                             'hsupa':                'AT+QCFG="hsupacat'}
         # Set modem to provide to cell_ID
-        if self.set_modem('network_reg_set_opt2'):
-            print("Modem set to report Cell-ID on request")
-        else:
+        if not self.set_modem('network_reg_set_opt2'):
             print("WARNING: Modem set to report Cell-ID on request FAILED")
 
     def send_at_and_parse(self, cmd_str):
@@ -107,6 +106,26 @@ class Modem:
                 split1 = answers[0].split(',"')
                 split2 = split1[1].split('",')
                 params['number'] = split2[0]
+
+        elif cmd_str == 'time':
+            if len(answers) == 1:
+                lst = answers[0].split(',')
+                t_split = lst[1].split('+')
+                time = t_split[0]
+                params['time'] = time
+
+        elif cmd_str == 'date_time':
+            if len(answers) == 1:
+                lst = answers[0].split(',')
+                d_split = lst[0].split('\"')
+                date = d_split[1].replace('/','-')
+                t_split = lst[1].split('+')
+                time = t_split[0]
+                time_zone = "+" + t_split[1]
+                params['date'] = date
+                params['time'] = time
+                params['time-zone'] = time_zone
+
 
         elif cmd_str == 'sig_serving_cell':
             #['+QENG: "servingcell","NOCONN","LTE","FDD",240,01,18A8118,442,1471,3,4,4,9D,-96,-9,-68,14,-']
@@ -169,15 +188,14 @@ class Modem:
                 params['ecno'] = split[6].replace("\"","")
 
         elif cmd_str == 'sig_neighbour_cell':
-            #['+QENG: "neighbourcell intra","LTE",1300,442,-11,-100,-67,-20,-,-,-,-,-', '+QENG: "neighbourcell intra","LTE",1300,396,-20,-116,-79,-20,-,-,-,-,-']
-            print(len(answers))
-            print(answers[0])
             for i in range (0,len(answers)):
                 cell = answers[i]
                 lst = cell.split(',')
                 params[i] = {}
                 params[i]['mode'] = lst[1].replace("\"", "") # LTE / GSM
-                print("list lengt",len(lst))
+
+                # Depending on operational mmode different info is sent.
+                # Use answer length and last known mode to determine
                 if params[i]['mode'] == "LTE":
                     if len(lst) == 13:
                         # LTE mode, neighbourcell intra based on lenth
@@ -386,21 +404,20 @@ class Modem:
         answer = self.get_info(cmd)
         print(answer)
 
+    # Debug function to test cmd_str and modem compability
     def test_sequence(self):
         self.test('support_eng_mode')
         print("Static (?) information")
         self.test('hardware')
-        print("imsi:")
-        ap = self.parse('imsi')
-        print("imsi2 ", ap)
         self.test('imsi')
-        print("imei")
+        self.test('imsi')
         self.test('imei')
         self.test('my_number')
         self.test('iccid')
         self.test('current_operator')
         self.test('preferred_operator')
-        self.test('local_time')
+        self.test('date_time')
+        self.test('time')
 
         self.test('config')
 
@@ -413,15 +430,9 @@ class Modem:
         self.test('network_info')
         self.test('network_reg')
         self.test('network_reg_status')
-
-        #self.test('network_reg_info')
-        reg_info = self.get_info('network_reg')
-        data = reg_info[0].split(',')
-        location_area = data[2].replace("\"", "")
-        cell_id = data[3].replace("\"", "")
-        print("location area is: ", location_area, "cellID is : ", cell_id)
         self.test('registered_network')
 
+    # Debug funciton to test parsing
     def parse_sequence(self):
         hw = self.send_at_and_parse('hardware')
         imsi = self.send_at_and_parse('imsi')
@@ -437,6 +448,26 @@ class Modem:
 
         neighbour_cell = self.send_at_and_parse('sig_neighbour_cell')
         print(json.dumps(neighbour_cell, indent = 2))
+
+    def get_static_info(self):
+        date_time = self.send_at_and_parse('date_time')
+        hw = self.send_at_and_parse('hardware')
+        imsi = self.send_at_and_parse('imsi')
+        imei = self.send_at_and_parse('imei')
+        my_number = self.send_at_and_parse('my_number')
+
+        # Merge
+        static_info = {**date_time, **hw, **imsi, **imei, **my_number}
+        return static_info
+
+    # Method to generat a log item for cell info
+    def get_cell_info(self):
+        log_item = {}
+        log_item['serving_cell'] = self.send_at_and_parse('sig_serving_cell')
+        log_item['neighbour_cell'] = self.send_at_and_parse('sig_neighbour_cell')
+        log_item['time'] = self.send_at_and_parse('time')
+        return log_item
+
 
     # Setup serial, not used for now
     def serConf(self):
@@ -457,9 +488,42 @@ class Modem:
     # Main
     def main(self):
         #self.test_sequence()
+        #self.parse_sequence()
 
-        print("\nTesting parser")
-        self.parse_sequence()
+
+        # Allocate logfile
+        my_log = {}
+
+        # Get static info
+        my_log['static_info'] = self.get_static_info()
+
+        # Enter thread to collect data
+        k = 1
+        while k < 5:
+            # Get dynamic info
+            log_item = self.get_cell_info()
+
+            # Add fake pos data
+            log_item['pos'] = {}
+            log_item['pos']['lat'] = 58.6
+            log_item['pos']['long'] = 15.6
+            log_item['pos']['alt'] = 102
+
+            my_log[str(k)] = {}
+            my_log[str(k)] = log_item
+
+            time.sleep(1);
+            k+=1
+
+        # print(json.dumps(static_info, indent=4))
+
+        # print(json.dumps(log_item, indent=4))
+        print(json.dumps(my_log, indent=4))
+
+        log_str = json.dumps(my_log, indent=4)
+        print(log_str)
+        with open('network-log.json','w', encoding="utf-8") as outfile:
+            outfile.write(log_str)
 
         self.close()
 
