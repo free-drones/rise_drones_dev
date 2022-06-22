@@ -294,7 +294,7 @@ class Modem:
         imei = self.parse('imei')
 
         # Merge
-        res = {**hw, **imsi, *imei}
+        res = {**hw, **imsi, **imei}
         print(json.dumps(res, ident = 4))
 
 
