@@ -16,14 +16,14 @@ __status__ = 'development'
 
 class Modem:
     def __init__(self, tty_name):
-        # self.ser = serial.Serial()
-        # self.ser.port = tty_name
-        # self.ser.timeout = 0.01     # readline timeout in seconds
-        # self.ser.baudrate = 115200  # baudrate
-        # self.ser.open()
-        # self.ser.flushInput()
-        # self.ser.flushOutput()
-        # self.mode = None
+        self.ser = serial.Serial()
+        self.ser.port = tty_name
+        self.ser.timeout = 0.01     # readline timeout in seconds
+        self.ser.baudrate = 115200  # baudrate
+        self.ser.open()
+        self.ser.flushInput()
+        self.ser.flushOutput()
+        self.mode = None
 
         # AT command convenience table
         self._commands =   {
@@ -64,8 +64,8 @@ class Modem:
                             'hsdpa':                'AT+QCFG="hsdpacat',
                             'hsupa':                'AT+QCFG="hsupacat'}
         # # Set modem to provide to cell_ID
-        # if not self.set_modem('network_reg_set_opt2'):
-        #     print("WARNING: Modem set to report Cell-ID on request FAILED")
+        if not self.set_modem('network_reg_set_opt2'):
+            print("WARNING: Modem set to report Cell-ID on request FAILED")
 
     def send_at_and_parse(self, cmd_str):
         params = {}
@@ -272,7 +272,6 @@ class Modem:
                         params[i]['rssi'] = lst[9].replace("\"","")
                         params[i]['srxlev'] = lst[10].replace("\"","")
 
-
         else:
             params[cmd_str] = "Not defined in parser"
         return params
@@ -343,7 +342,7 @@ class Modem:
             answers.append(decoded)
         return answers
 
-    # Send AT command from look-up directory
+    # Send AT command from look-up directory, return bool
     def set_modem(self, key):
         # Look-up key
         if key in self._commands:
@@ -447,6 +446,7 @@ class Modem:
         neighbour_cell = self.send_at_and_parse('sig_neighbour_cell')
         print(json.dumps(neighbour_cell, indent = 2))
 
+    # Convenience function for getting a static data
     def get_static_info(self):
         date_time = self.send_at_and_parse('date_time')
         hw = self.send_at_and_parse('hardware')
@@ -458,14 +458,13 @@ class Modem:
         static_info = {**date_time, **hw, **imsi, **imei, **my_number}
         return static_info
 
-    # Method to generat a log item for cell info
+    # Convenience method for getting cell info
     def get_cell_info(self):
         log_item = {}
         log_item['serving_cell'] = self.send_at_and_parse('sig_serving_cell')
         log_item['neighbour_cell'] = self.send_at_and_parse('sig_neighbour_cell')
         log_item['time'] = self.send_at_and_parse('time')
         return log_item
-
 
     # Setup serial, not used for now
     def serConf(self):
@@ -483,6 +482,7 @@ class Modem:
     def close(self):
         self.ser.close()
 
+    # Report a dummy log, for test puposes
     def dummy_log(self):
         with open('network-log.json', 'r', encoding='utf-8') as infile:
             dummy_logfile = json.load(infile)

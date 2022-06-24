@@ -2,7 +2,6 @@
 
 import json
 import argparse
-import serial
 import sys
 import os
 import time
@@ -26,7 +25,6 @@ __status__ = 'development'
 def main(modem):
     #self.test_sequence()
     #self.parse_sequence()
-
 
     # # Allocate logfile
     my_log = {}
@@ -78,7 +76,7 @@ def _main():
   # Initiate log file
   #dss.auxiliaries.logging.configure('app_noise', stdout=args.stdout, rotating=True, loglevel=args.log, subdir=subnet)
 
-  # Create the MODEM class
+  # Create the Modem class
 
   try:
     modem = Modem(args.tty)
