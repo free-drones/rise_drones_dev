@@ -7,8 +7,10 @@ import os
 import time
 import traceback
 
-sys.path.append(os.path.abspath('../'))
-from modem.modem import Modem
+#sys.path.append(os.path.abspath('../'))
+#from modem
+from modem import Modem
+
 
 #--------------------------------------------------------------------#
 
