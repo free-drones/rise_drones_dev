@@ -1,7 +1,17 @@
 #!/bin/bash
 # Script  runs as root
+
+# Creat log dir if not existing
+log_dir=/home/pi/rise_drones_dev/log
+if [ ! -d $log_dir ]
+then
+     echo "Creating log dir"
+     mkdir $log_dir
+     chown pi:pi $log_dir
+fi
+
 # Create log folder if not existing
-dir=/home/pi/companion_computer/log/performance
+dir=/home/pi/rise_drones_dev/log/performance
 if [ ! -d $dir ]
 then
      echo "Creating performance log folder"
