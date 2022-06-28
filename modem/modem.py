@@ -107,6 +107,14 @@ class Modem:
             # HX 003 does not support number and returns blank.
             else:
                 params['number'] = "-"
+        elif cmd_str == 'registered_network':
+            # Check for correct length
+            if len(answers) == 1:
+                split1 = answers[0].split(',')
+                split2 = split1[0].split(' "')
+                params["full_network_name"] = split2[1]
+                params["short_network_name"] = split1[1]
+                params["spn"] = split1[2]
 
         elif cmd_str == 'time':
             if len(answers) == 1:
@@ -456,9 +464,10 @@ class Modem:
         imsi = self.send_at_and_parse('imsi')
         imei = self.send_at_and_parse('imei')
         my_number = self.send_at_and_parse('my_number')
+        registered_network = self.send_at_and_parse('registered_network')
 
         # Merge
-        static_info = {**date_time, **hw, **imsi, **imei, **my_number}
+        static_info = {**date_time, **hw, **imsi, **imei, **my_number, **registered_network}
         return static_info
 
     # Convenience method for getting cell info
