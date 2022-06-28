@@ -104,6 +104,9 @@ class Modem:
                 split1 = answers[0].split(',"')
                 split2 = split1[1].split('",')
                 params['number'] = split2[0]
+            # HX 003 does not support number and returns blank.
+            else:
+                params['number'] = "-"
 
         elif cmd_str == 'time':
             if len(answers) == 1:
