@@ -112,9 +112,9 @@ class Modem:
             if len(answers) == 1:
                 split1 = answers[0].split(',')
                 split2 = split1[0].split(' "')
-                params["full_network_name"] = split2[1]
-                params["short_network_name"] = split1[1]
-                params["spn"] = split1[2]
+                params["full_network_name"] = split2[1].replace("\"", "")
+                params["short_network_name"] = split1[1].replace("\"", "")
+                params["spn"] = split1[2].replace("\"", "")
 
         elif cmd_str == 'time':
             if len(answers) == 1:
