@@ -1,5 +1,5 @@
 {
   "name": "RTK: SWEPOS to mavproxy",
-  "script_path": "/home/pi/companion_computer/start_scripts/swepos2mavproxy.sh",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/swepos2mavproxy.sh",
   "description": "Fetch SWEPOS RTCM"
 }
