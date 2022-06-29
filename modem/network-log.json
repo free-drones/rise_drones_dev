@@ -1,0 +1,193 @@
+{
+    "static_info": {
+        "date": "2022-06-27",
+        "time": "10:16:29",
+        "time-zone": "+08",
+        "manufacturer": "Quectel",
+        "model": "EC25",
+        "revision": "EC25EFAR06A04M4G",
+        "imsi": "240016034021569",
+        "imei": "866758045634140",
+        "number": "+46730715879"
+    },
+    "1": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-98",
+            "rsrq": "-9",
+            "raai": "-71",
+            "ainr": "16",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-9",
+                "rsrp": "-98",
+                "rssi": "-71",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "10:16:29"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    },
+    "2": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-98",
+            "rsrq": "-9",
+            "raai": "-71",
+            "ainr": "18",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-9",
+                "rsrp": "-98",
+                "rssi": "-71",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "10:16:30"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    },
+    "3": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-98",
+            "rsrq": "-9",
+            "raai": "-71",
+            "ainr": "17",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-9",
+                "rsrp": "-98",
+                "rssi": "-71",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "10:16:32"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    },
+    "4": {
+        "serving_cell": {
+            "state": "NOCONN",
+            "mode": "LTE",
+            "is_tdd": "FDD",
+            "mcc": "240",
+            "mnc": "01",
+            "cellid": "18A8118",
+            "pcid": "442",
+            "earfnc": "1471",
+            "freq_band_ind": "3",
+            "ul_bandwidth": "4",
+            "dl_bandwidth": "4",
+            "tac": "9D",
+            "rsrp": "-98",
+            "rsrq": "-9",
+            "raai": "-71",
+            "ainr": "13",
+            "arxlev": "-"
+        },
+        "neighbour_cell": {
+            "0": {
+                "mode": "LTE",
+                "earfcn": "1471",
+                "pcid": "442",
+                "rsrq": "-9",
+                "rsrp": "-98",
+                "rssi": "-71",
+                "sinr": "-20",
+                "srxlev": "-",
+                "cell_resel_priority": "-",
+                "s_non_intra_search": "-",
+                "thresh_serving_low": "-",
+                "s_intra_search": "-"
+            }
+        },
+        "time": {
+            "time": "10:16:33"
+        },
+        "pos": {
+            "lat": 58.6,
+            "long": 15.6,
+            "alt": 102
+        }
+    }
+}

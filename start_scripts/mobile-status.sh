@@ -5,7 +5,7 @@ export TERM=vt100
 # Check if a screen is already started, if not start a screen and log to file
 if ! screen -list | grep -q "atcmd"; then
     # Create log dir of not existing
-    dir=/home/pi/companion_computer/log/mobile_data
+    dir=/home/pi/rise_drones_dev/log/mobile_data
     if [ ! -d $dir ]
     then
         echo "Creating mobile_data log folder"
