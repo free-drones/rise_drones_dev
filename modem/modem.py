@@ -157,8 +157,8 @@ class Modem:
                 params['tac'] = lst[12].replace("\"", "")
                 params['rsrp'] = lst[13].replace("\"", "")
                 params['rsrq'] = lst[14].replace("\"", "")
-                params['raai'] = lst[15].replace("\"", "")
-                params['ainr'] = lst[16].replace("\"", "")
+                params['rssi'] = lst[15].replace("\"", "")
+                params['sinr'] = lst[16].replace("\"", "")
                 params['arxlev'] = lst[17].replace("\"", "")
 
 
