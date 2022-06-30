@@ -38,7 +38,7 @@ def _main():
   # parse command-line arguments
   parser = argparse.ArgumentParser(description='APP "app_noise"', allow_abbrev=False, add_help=False)
   parser.add_argument('-h', '--help', action='help', help=argparse.SUPPRESS)
-  parser.add_argument('--tty', type=str, help='tty reference /dev/ttyXXX', required=True)
+  parser.add_argument('--tty', type=str, help='tty reference /dev/ttyXXX', required=False)
   args = parser.parse_args()
 
   # Create the Modem class
