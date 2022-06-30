@@ -27,7 +27,7 @@ def main(modem):
     # Merge into one dict
     modem_status = {**static_info, **signal_quality}
     # Print to scrren
-    print(f'Modem attached on {self.ser.port}')
+    print(f'Modem attached on {modem.ser.port}')
     print(json.dumps(modem_status, indent=4))
 
     modem.close()
