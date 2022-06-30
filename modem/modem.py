@@ -114,7 +114,7 @@ class Modem:
             # Check for correct length
             if len(answers) == 1:
                 split = answers.split(': ')
-                split2 = split.split(',')
+                split2 = split[1].split(',')
                 params['rssi'] = split2[0].replace("\"", "")
                 params['bit_error_rate'] = split2[1].raplace("\"", "")
 
