@@ -1,0 +1,5 @@
+{
+  "name": "MODEM: Modem Status",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/modem_status.sh",
+  "description": "Modem status and parameters"
+}
