@@ -25,9 +25,6 @@ __status__ = 'development'
 
 # Main
 def main(modem):
-    #self.test_sequence()
-    #self.parse_sequence()
-
     # # Allocate logfile
     my_log = {}
 
