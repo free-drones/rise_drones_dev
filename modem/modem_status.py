@@ -68,14 +68,6 @@ def _main():
     print("main(modem) in network_status failed somehow")
     print(traceback.format_exc())
 
-  try:
-    modem = Modem(args.tty)
-    main(modem)
-  except:
-
-    print("Something bad happened")
-    print(traceback.format_exc())
-
 #--------------------------------------------------------------------#
 if __name__ == '__main__':
   _main()
