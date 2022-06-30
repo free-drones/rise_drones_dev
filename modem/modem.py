@@ -88,6 +88,12 @@ class Modem:
                 revlist = answers[2].split(' ')
                 params['revision'] = revlist[1]
 
+        elif cmd_str == 'iccid':
+            #Check for correct length
+            if len(answers) == 1:
+                split = answers[0].split(": ")
+                params['iccid'] = split[1].replace("\"", "")
+
         elif cmd_str == 'imsi':
             # Check for correct lenght
             if len(answers) == 1:
@@ -463,11 +469,12 @@ class Modem:
         hw = self.send_at_and_parse('hardware')
         imsi = self.send_at_and_parse('imsi')
         imei = self.send_at_and_parse('imei')
+        iccid = self.send_at_and_parse('iccid')
         my_number = self.send_at_and_parse('my_number')
         registered_network = self.send_at_and_parse('registered_network')
 
         # Merge
-        static_info = {**date_time, **hw, **imsi, **imei, **my_number, **registered_network}
+        static_info = {**date_time, **hw, **imsi, **imei, **iccid, **my_number, **registered_network}
         return static_info
 
     # Convenience method for getting cell info
