@@ -38,7 +38,7 @@ def _main():
   # parse command-line arguments
   parser = argparse.ArgumentParser(description='APP "app_noise"', allow_abbrev=False, add_help=False)
   parser.add_argument('-h', '--help', action='help', help=argparse.SUPPRESS)
-  parser.add_argument('--tty', type=str, help='tty reference /dev/ttyXXX', required=False)
+  parser.add_argument('--tty', type=str, default='/dev/ttyUSB3', help='tty reference /dev/ttyXXX', required=False)
   args = parser.parse_args()
 
   # Create the Modem class
@@ -46,18 +46,18 @@ def _main():
 
   if args.tty != '/dev/ttyUSB3':
     try:
-      modem = Modem('/dev/ttyUSB3')
+      modem = Modem(args.tty)
     except:
-      print("Could not connect to specified tty")
+      print(f'Could not connect to specified tty: {args.tty}')
       return
   # Else try what should work
   else:
     try:
-      modem = Modem('/dev/ttyUSB3')
+      modem = Modem('/dev/ttyUSB2')
     except:
-      print("Could not ocnnect to /dev/ttyUSB3")
+      print("Could not ocnnect to /dev/ttyUSB2")
       try:
-        modem = Modem('/dev/ttyUSB2')
+        modem = Modem('/dev/ttyUSB3')
       except:
         print("Could not ocnnect to /dev/ttyUSB3")
         return
