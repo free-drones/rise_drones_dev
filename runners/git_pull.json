@@ -1,5 +1,5 @@
 {
-  "name": "GIT: git pull",
-  "script_path": "/home/pi/companion_computer/start_scripts/git_pull.sh",
-  "description": "Git pull on current branch"
+  "name": "GIT: Pull rise drones",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/git_pull.sh",
+  "description": "Git pull on rise_drones and rise_drones_dev"
 }
