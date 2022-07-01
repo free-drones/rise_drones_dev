@@ -1,5 +1,0 @@
-{
-  "name": "GSM: Mobile Network Status",
-  "script_path": "/home/pi/companion_computer/start_scripts/mobile-status-screen.sh",
-  "description": "Link quality of mobile connection"
-}

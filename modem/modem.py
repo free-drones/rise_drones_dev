@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 
 import json
-import argparse
 import serial
-import sys
-import time
-import traceback
 
 #--------------------------------------------------------------------#
 
@@ -113,6 +109,15 @@ class Modem:
             # HX 003 does not support number and returns blank.
             else:
                 params['number'] = "-"
+
+        elif cmd_str == 'sig_quality':
+            # Check for correct length
+            if len(answers) == 1:
+                split = answers[0].split(': ')
+                split2 = split[1].split(',')
+                params["rssi"] = split2[0].replace("\"", "")
+                params["bit_error_rate"] = split2[1].replace("\"", "")
+
         elif cmd_str == 'registered_network':
             # Check for correct length
             if len(answers) == 1:
@@ -472,9 +477,9 @@ class Modem:
         iccid = self.send_at_and_parse('iccid')
         my_number = self.send_at_and_parse('my_number')
         registered_network = self.send_at_and_parse('registered_network')
-
+        spn = {'spn': registered_network['spn']}
         # Merge
-        static_info = {**date_time, **hw, **imsi, **imei, **iccid, **my_number, **registered_network}
+        static_info = {**date_time, **hw, **imsi, **imei, **iccid, **my_number, **spn}
         return static_info
 
     # Convenience method for getting cell info
