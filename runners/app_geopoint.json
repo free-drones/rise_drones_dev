@@ -1,0 +1,5 @@
+{
+  "name": "APP: app geopoint",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/app_geopoint.sh",
+  "description": "Run application for saving a LLA point to file. Requires RTK!"
+}
