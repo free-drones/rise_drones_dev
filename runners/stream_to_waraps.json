@@ -1,0 +1,5 @@
+{
+  "name": "VIDEO: Stream video to WARA-PS",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/stream_to_waraps.sh",
+  "description": "Start video streaming from JTX to WARA-PS"
+}

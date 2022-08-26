@@ -1,0 +1,5 @@
+{
+  "name": "MODEM: USB-modem status",
+  "script_path": "sudo /home/pi/rise_drones_dev/start_scripts/usb_modem_status.sh",
+  "description": "Calls a number of status quries and prints result"
+}
