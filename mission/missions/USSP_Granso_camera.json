@@ -1,0 +1,53 @@
+{
+    "camera route":{
+        "id0": {
+            "lat": 57.7625625,
+            "lon": 16.68562464,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id1": {
+            "lat": 57.76235782295061,
+            "lon": 16.685188718626847,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id2": {
+            "lat": 57.76262251,
+            "lon": 16.68459275,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id3": {
+            "lat": 57.76289448,
+            "lon": 16.68514205,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id4": {
+            "lat": 57.76267128,
+            "lon": 16.68568654,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id5": {
+            "lat": 57.76241866823445,
+            "lon": 16.685916393179298,
+            "alt": 10,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        }
+    },
+    "source_file": "../missions/USSP_Granso_camera.plan"
+}

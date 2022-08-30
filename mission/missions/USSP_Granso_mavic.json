@@ -1,0 +1,45 @@
+{
+    "perimeter control":{
+        "id0": {
+            "lat": 57.76232106,
+            "lon": 16.68532404,
+            "alt": 50,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 3.0
+        },
+        "id1": {
+            "lat": 57.76267426,
+            "lon": 16.68477073,
+            "alt": 50,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 3.0
+        },
+        "id2": {
+            "lat": 57.76258258,
+            "lon": 16.68450836,
+            "alt": 50,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 3.0
+        },
+        "id3": {
+            "lat": 57.76221969,
+            "lon": 16.68505741,
+            "alt": 50,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 3.0
+        },
+        "id4": {
+            "lat": 57.76222202226877,
+            "lon": 16.685520297253703,
+            "alt": 50,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 3.0
+        }
+    },
+    "source_file": "USSP_Granso_mavic.plan"
+}
