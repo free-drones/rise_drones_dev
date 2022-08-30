@@ -1,0 +1,27 @@
+{
+    "id0": {
+        "lat": 57.7626694,
+        "lon": 16.68535205,
+        "alt": 20,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 2.0
+    },
+    "id1": {
+        "lat": 57.76274572,
+        "lon": 16.68553488,
+        "alt": 20,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 2.0
+    },
+    "id2": {
+        "lat": 57.76241105000253,
+        "lon": 16.68589715631876,
+        "alt": 10,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 2.0
+    },
+    "source_file": "../missions/Granso_look_closer.plan"
+}

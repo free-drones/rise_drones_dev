@@ -1,0 +1,47 @@
+{
+    "drop off":{
+        "id0": {
+            "lat": 57.76249267552653,
+            "lon": 16.685492373272467,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id1": {
+            "lat": 57.762771915615545,
+            "lon": 16.68450458671012,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id2": {
+            "lat": 57.762998490324705,
+            "lon": 16.68501291142121,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        },
+        "id3": {
+            "lat": 57.76247141,
+            "lon": 16.6860577,
+            "alt": 10,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        }
+    },
+    "return":{
+        "id0": {
+            "lat": 57.7623693,
+            "lon": 16.6858228,
+            "alt": 10,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 2.0
+        }
+    },
+    "source_file": "../missions/USSP_Granso_LMD.plan"
+}
