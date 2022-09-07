@@ -1,6 +1,6 @@
 #!/bin/bash
 app=app_lmd_granso.py
-mission=../../rise_drones_dev/mission/missions/USSP_Granso_LMD.json
+mission=../../../rise_drones_dev/mission/missions/USSP_Granso_LMD.json
 echo "app: $app"
 echo "mission: $mission"
 cd /home/dronehost/rise_drones/app
