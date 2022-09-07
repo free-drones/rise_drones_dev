@@ -1,5 +1,5 @@
 #!/bin/bash
-app=../../../rise_drones/src/app/app_lmd_granso.py
+app=../../../rise_drones/src/app/app_ussp_mission.py
 mission=../../mission/missions/USSP_Granso_LMD.json
 echo "app: $app"
 echo "mission: $mission"
