@@ -1,4 +1,5 @@
 #!/bin/bash
-app=../../../rise_drones/src/app/app_monitor.py
-echo "app: $app"
-/home/droneadmin/.venv/rise_drones/bin/python3 $app --crm=10.44.160.10:16300 --app_ip=10.44.160.10 --stdout --log=info
+
+# Use screen to be able to run app_monitor in background
+screen -S app_monitor bash -c "bash app_monitor_screen.sh"
+printf "Re-attach to to screen: screen -r app_monitor\n"
