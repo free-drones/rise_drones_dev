@@ -2,7 +2,7 @@
 app=../../../rise_drones/src/app/app_monitor.py
 printf "app: $app"
 printf "\n\nThis is a new screen session named app_monitor\n"
-printf "Detach screen:        ctrl + a + d\n"
+printf "Detach screen:        ctrl + a, d\n"
 printf "Resume screen:        screen -r app_monitor\n"
 printf "Quit app_monitor:     ctrl + c\n"
 printf "Quit screen session   ctrl + d\n\n"
