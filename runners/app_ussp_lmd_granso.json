@@ -1,0 +1,5 @@
+{
+  "name": "APP: USSP LMD Granso",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/app_ussp_lmd_granso.sh",
+  "description": "Run application USSP LMD Granso"
+}

@@ -25,9 +25,9 @@
             "speed": 2.0
         },
         "id3": {
-            "lat": 57.76247141,
-            "lon": 16.6860577,
-            "alt": 10,
+            "lat": 57.7621537,
+            "lon": 16.6855552,
+            "alt": 15,
             "heading": "course",
             "alt_type": "relative",
             "speed": 2.0
@@ -35,9 +35,9 @@
     },
     "return":{
         "id0": {
-            "lat": 57.7623693,
-            "lon": 16.6858228,
-            "alt": 10,
+            "lat": 57.7620687,
+            "lon": 16.6855481,
+            "alt": 20,
             "heading": "course",
             "alt_type": "relative",
             "speed": 2.0
