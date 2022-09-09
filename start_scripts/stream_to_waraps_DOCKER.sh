@@ -1,3 +1,4 @@
 #!/bin/bash
 
-"cd /home/pi/docker; docker compose up"
+cd /home/pi/docker
+docker compose up
