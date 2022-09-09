@@ -1,0 +1,5 @@
+{
+  "name": "VIDEO: Stream video to WARA-PS DOCKER",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/stream_to_waraps_DOCKER.sh",
+  "description": "Start DOOCKER streaming video from pi to WARA-PS"
+}
