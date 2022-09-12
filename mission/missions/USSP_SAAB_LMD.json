@@ -33,6 +33,7 @@
             "heading": "course",
             "alt_type": "relative",
             "speed": 5.0
-        },
+        }
+    },
     "source_file": "USSP_SAAB_LMD.plan"
 }
