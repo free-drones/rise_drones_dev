@@ -1,0 +1,5 @@
+{
+  "name": "VIDEO: DSLR to socket",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/dslr_to_video.sh",
+  "description": "Send the DSLR stream from RPI to JTX via UDP"
+}
