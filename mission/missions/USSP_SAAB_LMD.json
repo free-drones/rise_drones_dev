@@ -1,0 +1,38 @@
+{
+    "drop off":{
+        "id0": {
+            "lat": 58.40979219,
+            "lon": 15.6627393,
+            "alt": 40,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id1": {
+            "lat": 58.41021786,
+            "lon": 15.66059184,
+            "alt": 40,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id2": {
+            "lat": 58.40893112588712,
+            "lon": 15.658534745182351,
+            "alt": 15,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        }
+    },
+    "return":{
+        "id0": {
+            "lat": 58.40890345283472,
+            "lon": 15.659986309811416,
+            "alt": 15,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+    "source_file": "USSP_SAAB_LMD.plan"
+}

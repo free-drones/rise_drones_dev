@@ -1,0 +1,61 @@
+{
+    "camera route":{
+        "id0": {
+            "lat": 58.409452637850215,
+            "lon": 15.661783991442434,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id1": {
+            "lat": 58.40937571,
+            "lon": 15.66272909,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id2": {
+            "lat": 58.40921286,
+            "lon": 15.6635643,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id3": {
+            "lat": 58.40952425307308,
+            "lon": 15.665265351890042,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id4": {
+            "lat": 58.410530559138934,
+            "lon": 15.660450388918122,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id5": {
+            "lat": 58.40903934,
+            "lon": 15.65896222,
+            "alt": 30,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id6": {
+            "lat": 58.40899499745072,
+            "lon": 15.660045627921363,
+            "alt": 15,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        }
+    }
+    "source_file": "USSP_SAAB_CAMERA1.plan"
+}

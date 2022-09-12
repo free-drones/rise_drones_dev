@@ -1,0 +1,13 @@
+{
+    "first responder":{
+        "id0": {
+            "lat": 58.40946129427022,
+            "lon": 15.659288752837597,
+            "alt": 15,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        }
+    }
+    "source_file": "USSP_SAAB_CAMERA_first_responder.plan"
+}
