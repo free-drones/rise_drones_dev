@@ -1,0 +1,5 @@
+{
+  "name": "APP: responder SAAB",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/app_responder_saab.sh",
+  "description": "Run application first responder SAAB"
+}

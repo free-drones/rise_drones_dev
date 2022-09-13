@@ -1,0 +1,5 @@
+{
+  "name": "APP: USSP LMD SAAB",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/app_ussp_lmd_saab.sh",
+  "description": "Run application USSP LMD SAAB"
+}
