@@ -1,0 +1,75 @@
+id:585
+user_name:10.44.163.102
+user_id:10.44.163.102-8b104ceca28e4e27
+script:DSS: crm_dss HX_00X
+start_time:1663161947452
+command:/home/pi/rise_drones_dev/start_scripts/crm_dss_hx_00x.sh
+output_format:terminal
+exit_code:-15
+>>>>>  OUTPUT STARTED <<<<<
+Logging pi performance /home/pi/rise_drones_dev/log/performance
+Configuration file found at "/home/pi/.rise_drones/.config"
+2022-09-14 15:25:48,853: INFO [dss.auxiliaries.logging] crm_dss.py 1.3.0 v1.3.0-32-g666a8f6
+2022-09-14 15:25:48,854: INFO [dss.auxiliaries.logging] arguments: ['--drone=127.0.0.1:14555', '--crm=10.44.160.10:16300', '--dss_ip=10.44.163.22', '--descr=HX-003', '--capabilities', 'RTK', 'VIDEO', '--stdout', '--log=info', '--without-midstick-check']
+2022-09-14 15:25:48,887: INFO [dss.server.dss] DSS Server version: 1.3.0, git describe: v1.3.0-32-g666a8f6
+2022-09-14 15:25:48,891: INFO [dss.server.dss] Starting pub server on 16330... done
+2022-09-14 15:25:48,893: INFO [dss.server.hexacopter] Connecting to vehicle on tcp:127.0.0.1:14555 using baudrate 921600...
+2022-09-14 15:25:52,078: INFO [dss.server.hexacopter] Connection ok
+2022-09-14 15:25:52,079: INFO [dss.server.hexacopter] Ground speed set to 4m/s
+2022-09-14 15:25:52,080: INFO [dss.server.hexacopter] Gimbal rotate: pitch: 0, roll: 0, yaw: 0
+[K2022-09-14 15:25:52,083: INFO [dss.server.hexacopter] Flying state: on_ground
+[PILOT has the CONTROLS] Waiting for GUIDED mode...2022-09-14 15:25:52,091: INFO [dss.server.dss] MODEM: Network logger thread enabled
+2022-09-14 15:25:52,094: INFO [dss.server.dss] MODEM: Could not find modem device, ttyUSB2
+2022-09-14 15:25:52,110: INFO [dss.server.dss] MODEM: Connected to modem on /dev/ttyUSB3
+2022-09-14 15:25:52,116: INFO [dss.server.dss] MODEM: Modem set to report Cell-ID on request
+2022-09-14 15:25:52,126: INFO [dss.client.crm_api] CRM crm_api v1.3.0-32-g666a8f6
+2022-09-14 15:25:52,128: INFO [dss.server.dss] registering to CRM with capabilities: ['RTK', 'VIDEO']
+No response within timeout, try again. Attempts:  1
+No response within timeout, try again. Attempts:  2
+No response within timeout, try again. Attempts:  3
+No response within timeout, try again. Attempts:  4
+2022-09-14 15:25:52,269: INFO [dss.server.dss] MODEM: imei: 866758043828991, number: -
+[K[PILOT has the CONTROLS] Waiting for GUIDED mode...2022-09-14 15:25:53,379: INFO [dss.server.dss] Received request: {'fcn': 'data_stream', 'id': 'crm', 'stream': 'battery', 'enable': True}
+2022-09-14 15:25:53,380: INFO [dss.server.dss] Global listener added: battery
+2022-09-14 15:25:53,381: INFO [dss.server.dss] Replied: {"fcn": "ack", "call": "data_stream"}
+[K[PILOT has the CONTROLS] Waiting for GUIDED mode...2022-09-14 15:25:54,187: INFO [dss.server.dss] Received request: {'fcn': 'data_stream', 'id': 'da251', 'stream': 'LLA', 'enable': True}
+2022-09-14 15:25:54,190: INFO [dss.server.dss] Global listener added: LLA
+2022-09-14 15:25:54,194: INFO [dss.server.dss] Replied: {"fcn": "ack", "call": "data_stream"}
+[K[PILOT has the CONTROLS] Waiting for GUIDED mode...2022-09-14 15:25:54,480: INFO [dss.server.dss] Received request: {'fcn': 'get_info', 'id': 'da251'}
+2022-09-14 15:25:54,481: INFO [dss.server.dss] Replied: {"info_pub_port": 16330, "data_pub_port": "", "id": "dss271", "fcn": "ack", "call": "get_info"}
+[K[PILOT has the CONTROLS] Waiting for GUIDED mode...[K[PILOT has the CONTROLS] Waiting for GUIDED mode...[K[PILOT has the CONTROLS] Waiting for GUIDED mode...[K[PILOT has the CONTROLS] Waiting for GUIDED mode...[K[PILOT has the CONTROLS] Waiting for GUIDED mode...[K[PILOT has the CONTROLS] Waiting for GUIDED mode...[K[PILOT has the CONTROLS] Waiting for GUIDED mode...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...2022-09-14 15:26:31,183: INFO [dss.server.dss] Received request: {'fcn': 'set_owner', 'id': 'crm', 'owner': 'da272'}
+2022-09-14 15:26:31,184: INFO [dss.server.dss] Replied: {"fcn": "ack", "call": "set_owner"}
+[K[PILOT has the CONTROLS] Waiting for APPLICATION to connect...2022-09-14 15:26:31,205: INFO [dss.server.dss] Application is connected
+2022-09-14 15:26:31,206: INFO [dss.server.dss] APPLICATION got the the CONTROLS
+2022-09-14 15:26:31,207: INFO [dss.server.hexacopter] Gimbal rotate: pitch: 0, roll: 0, yaw: 0
+[K[APPLICATION has the CONTROLS] idle2022-09-14 15:26:31,209: INFO [dss.server.dss] Received request: {'fcn': 'get_info', 'id': 'da272'}
+2022-09-14 15:26:31,211: INFO [dss.server.dss] Replied: {"info_pub_port": 16330, "data_pub_port": "", "id": "dss271", "fcn": "ack", "call": "get_info"}
+[K[APPLICATION has the CONTROLS] idle2022-09-14 15:26:31,214: INFO [dss.server.dss] Received request: {'fcn': 'get_info', 'id': 'da272'}
+2022-09-14 15:26:31,216: INFO [dss.server.dss] Replied: {"info_pub_port": 16330, "data_pub_port": "", "id": "dss271", "fcn": "ack", "call": "get_info"}
+[K[APPLICATION has the CONTROLS] idle2022-09-14 15:26:31,219: INFO [dss.server.dss] Received request: {'fcn': 'data_stream', 'id': 'da272', 'stream': 'LLA', 'enable': True}
+2022-09-14 15:26:31,219: INFO [dss.server.dss] Global listener added: LLA
+2022-09-14 15:26:31,220: INFO [dss.server.dss] Replied: {"fcn": "ack", "call": "data_stream"}
+[K[APPLICATION has the CONTROLS] idle2022-09-14 15:26:31,727: INFO [dss.server.dss] Received request: {'fcn': 'set_init_point', 'id': 'da272', 'heading_ref': 'drone'}
+2022-09-14 15:26:31,729: INFO [dss.server.dss] Replied: {"fcn": "ack", "call": "set_init_point"}
+[K[APPLICATION has the CONTROLS] idle2022-09-14 15:26:31,731: INFO [dss.server.dss] Received request: {'fcn': 'set_geofence', 'id': 'da272', 'height_low': 8.0, 'height_high': 120.0, 'radius': 2000.0}
+2022-09-14 15:26:31,732: INFO [dss.server.dss] Replied: {"fcn": "ack", "call": "set_geofence"}
+[K[APPLICATION has the CONTROLS] idle2022-09-14 15:26:31,734: INFO [dss.server.dss] Received request: {'fcn': 'upload_mission_LLA', 'id': 'da272', 'mission': {'id0': {'lat': 58.40946129427022, 'lon': 15.659288752837597, 'alt': 25, 'heading': 'course', 'alt_type': 'relative', 'speed': 5.0}, 'id1': {'lat': 58.40946129427022, 'lon': 15.659288752837597, 'alt': 15, 'heading': 'course', 'alt_type': 'relative', 'speed': 5.0}, 'status': 'pending', 'speed': 5.0}}
+Upload mission {'id0': {'lat': 58.40946129427022, 'lon': 15.659288752837597, 'alt': 25, 'heading': 'course', 'alt_type': 'relative', 'speed': 5.0}, 'id1': {'lat': 58.40946129427022, 'lon': 15.659288752837597, 'alt': 15, 'heading': 'course', 'alt_type': 'relative', 'speed': 5.0}, 'status': 'pending', 'speed': 5.0}
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/threading.py", line 954, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.9/threading.py", line 892, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pi/rise_drones/src/app/dss/server/dss.py", line 1201, in _main
+    answer = request(msg)
+  File "/home/pi/rise_drones/src/app/dss/server/dss.py", line 512, in _request_upload_mission
+    check_ok, descr = self._hexa.upload_mission(mission)     # check mission cannot be run prior to is_init_point_set
+  File "/home/pi/rise_drones/src/app/dss/server/hexacopter.py", line 493, in upload_mission
+    new_wp = self.json_to_LLA(mission[id_str], id_str)
+  File "/home/pi/rise_drones/src/app/dss/server/hexacopter.py", line 427, in json_to_LLA
+    wp.id = int(id_str.replace("id",""))
+ValueError: invalid literal for int() with base 10: 'status'
+
+>> STOPPED BY USER
+2022-09-14 15:30:47,875: WARNING [dss.server.dss] Shutdown due to interrupt

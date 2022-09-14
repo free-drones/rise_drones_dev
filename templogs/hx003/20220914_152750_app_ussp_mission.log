@@ -1,0 +1,10 @@
+2022-09-14 15:27:50,714: INFO [dss.auxiliaries.logging] app_ussp_mission.py 1.3.0 v1.3.0-32-g666a8f6
+2022-09-14 15:27:50,715: INFO [dss.auxiliaries.logging] arguments: ['--crm=10.44.160.10:16300', '--app_ip=10.44.163.22', '--mission=../../../rise_drones_dev/mission/missions/USSP_SAAB_CAMERA_first_responder.json', '--stdout', '--log=info', '--capabilities', 'RTK', 'VIDEO', '--without-negotiation']
+2022-09-14 15:27:50,745: INFO [dss.client.client_lib] DSS client_lib v1.3.0-32-g666a8f6
+2022-09-14 15:27:50,774: INFO [dss.client.crm_api] CRM crm_api v1.3.0-32-g666a8f6
+2022-09-14 15:27:50,781: INFO [dss.app_ussp_mission] Reply socket is listening on: 16304
+2022-09-14 15:27:51,599: INFO [dss.app_ussp_mission] App da274 listening on *:16304
+2022-09-14 15:27:51,600: INFO [dss.app_ussp_mission] App registered with CRM: da274
+2022-09-14 15:27:51,601: INFO [dss.app_ussp_mission] App connecting to USSP: ussp.itn.liu.se
+2022-09-14 15:27:51,601: INFO [dss.client.ussp_client_lib] U-space Client Lib
+2022-09-14 15:27:51,602: INFO [dss.client.ussp_client_api] USSP Client API

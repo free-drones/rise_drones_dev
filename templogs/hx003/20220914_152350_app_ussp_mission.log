@@ -1,0 +1,7 @@
+2022-09-14 15:23:51,332: INFO [dss.auxiliaries.logging] app_ussp_mission.py 1.3.0 v1.3.0-32-g666a8f6
+2022-09-14 15:23:51,333: INFO [dss.auxiliaries.logging] arguments: ['--crm=10.44.160.10:16300', '--app_ip=10.44.163.22', '--mission=../../../rise_drones_dev/mission/missions/USSP_SAAB_CAMERA_first_responder.json', '--stdout', '--log=info', '--capabilities', 'RTK', 'VIDEO', '--without-negotiation']
+2022-09-14 15:23:51,363: INFO [dss.client.client_lib] DSS client_lib v1.3.0-32-g666a8f6
+2022-09-14 15:23:51,392: INFO [dss.client.crm_api] CRM crm_api v1.3.0-32-g666a8f6
+2022-09-14 15:23:51,400: INFO [dss.app_ussp_mission] Reply socket is listening on: 16346
+2022-09-14 15:23:52,402: INFO [dss.auxiliaries.zmq] [req] [crm] reconnecting...
+2022-09-14 15:23:52,404: ERROR [dss.app_ussp_mission] Failed to instantiate application: Probably the CRM couldn't be reached

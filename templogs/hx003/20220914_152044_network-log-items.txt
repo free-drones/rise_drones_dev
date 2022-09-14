@@ -1,0 +1,1 @@
+{ "static_info":{"date": "2022-09-14", "time": "15:20:43", "time-zone": "+08", "manufacturer": "Quectel", "model": "EC25", "revision": "EC25EFAR06A03M4G", "imsi": "240016035564692", "imei": "866758043828991", "iccid": "89460140191119911400", "number": "-", "spn": "Telia"}
