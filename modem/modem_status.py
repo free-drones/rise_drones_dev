@@ -57,11 +57,11 @@ def _main():
     try:
       modem = Modem('/dev/ttyUSB2')
     except:
-      print("Could not ocnnect to /dev/ttyUSB2")
+      print("Could not connect to /dev/ttyUSB2")
       try:
         modem = Modem('/dev/ttyUSB3')
       except:
-        print("Could not ocnnect to /dev/ttyUSB3")
+        print("Could not connect to /dev/ttyUSB3")
         return
   # Finally try main
   try:
