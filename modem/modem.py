@@ -342,7 +342,7 @@ class Modem:
                     if attempts == 5:
                         print("MODEM.py: Warning, no answer recevied within 5 timeouts")
                         break
-                    print("MODEM.py: No response within timeout, try again. Attempts: ", attempts)
+                    #print("MODEM.py: No response within timeout, try again. Attempts: ", attempts)
                     attempts += 1
                     continue
                 # Complete response is already received
@@ -386,7 +386,7 @@ class Modem:
                     if attempts == 5:
                         print("MODEM.py: Warning, no answer recevied within 5 timeouts")
                         break
-                    print("MODEM.py: No response within timeout, try again. Attempts: ", attempts)
+                    #print("MODEM.py: No response within timeout, try again. Attempts: ", attempts)
                     attempts += 1
                     continue
                 # Complete response is already received
