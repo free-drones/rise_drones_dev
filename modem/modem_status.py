@@ -42,8 +42,7 @@ def _main():
   parser.add_argument('-h', '--help', action='help', help=argparse.SUPPRESS)
   args = parser.parse_args()
 
-  # Create the Modem class
-# Try to create the Modem class, the correct path to modem is required
+  # Connect to modem on specified path
   dev_paths = [2,3]
   connected=False
   for dev_path in dev_paths:
@@ -57,8 +56,8 @@ def _main():
         print(f'MODEM: Could not find modem device, {device}')
 
   # None of the dev_paths works..
-    if not connected:
-      return
+  if not connected:
+    return
 
   # Finally try main
   try:
