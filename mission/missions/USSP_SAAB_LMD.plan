@@ -91,7 +91,7 @@
                 "type": "SimpleItem"
             },
             {
-                "AMSLAltAboveTerrain": null,
+                "AMSLAltAboveTerrain": 15,
                 "Altitude": 15,
                 "AltitudeMode": 1,
                 "autoContinue": true,
@@ -103,17 +103,17 @@
                     0,
                     0,
                     null,
-                    58.40890345283472,
-                    15.659986309811416,
+                    58.409157527032875,
+                    15.660751310262071,
                     15
                 ],
                 "type": "SimpleItem"
             }
         ],
         "plannedHomePosition": [
-            58.4089037,
-            15.65998583,
-            46
+            58.40915717476573,
+            15.660751055939755,
+            44.03417084336752
         ],
         "vehicleType": 2,
         "version": 2
