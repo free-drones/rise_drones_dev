@@ -1,16 +1,16 @@
 {
     "first responder":{
         "id0": {
-            "lat": 58.40946129427022,
-            "lon": 15.659288752837597,
+            "lat": 58.4094349,
+            "lon": 15.6593451,
             "alt": 25,
             "heading": "course",
             "alt_type": "relative",
             "speed": 5.0
         },
         "id1": {
-            "lat": 58.40946129427022,
-            "lon": 15.659288752837597,
+            "lat": 58.4094349,
+            "lon": 15.6593451,
             "alt": 15,
             "heading": "course",
             "alt_type": "relative",
