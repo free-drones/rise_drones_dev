@@ -1,0 +1,5 @@
+{
+  "name": "VIDEO: (1) Socket to /dev/video",
+  "script_path": "/home/pi/rise_drones_dev/start_scripts/socket_to_video.sh",
+  "description": "Read the DSLR stream on JTX from RPI and send it to /dev/video0"
+}

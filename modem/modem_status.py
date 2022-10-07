@@ -40,29 +40,25 @@ def _main():
   # parse command-line arguments
   parser = argparse.ArgumentParser(description='APP "app_noise"', allow_abbrev=False, add_help=False)
   parser.add_argument('-h', '--help', action='help', help=argparse.SUPPRESS)
-  parser.add_argument('--tty', type=str, default='/dev/ttyUSB3', help='tty reference /dev/ttyXXX', required=False)
   args = parser.parse_args()
 
-  # Create the Modem class
-# Try to create the Modem class, the correct path to modem is required
-
-  if args.tty != '/dev/ttyUSB3':
-    try:
-      modem = Modem(args.tty)
-    except:
-      print(f'Could not connect to specified tty: {args.tty}')
-      return
-  # Else try what should work
-  else:
-    try:
-      modem = Modem('/dev/ttyUSB2')
-    except:
-      print("Could not ocnnect to /dev/ttyUSB2")
+  # Connect to modem on specified path
+  dev_paths = [2,3]
+  connected=False
+  for dev_path in dev_paths:
+    device=f"/dev/serial/by-id/usb-Android_Android-if0{dev_path}-port0"
+    if not connected:
       try:
-        modem = Modem('/dev/ttyUSB3')
+        modem = Modem(device)
+        print(f'MODEM: Connected to modem on {device}')
+        connected=True
       except:
-        print("Could not ocnnect to /dev/ttyUSB3")
-        return
+        print(f'MODEM: Could not find modem device, {device}')
+
+  # None of the dev_paths works..
+  if not connected:
+    return
+
   # Finally try main
   try:
     main(modem)

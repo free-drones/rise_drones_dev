@@ -2,6 +2,7 @@
 
 import json
 import serial
+import time
 
 #--------------------------------------------------------------------#
 
@@ -14,7 +15,7 @@ class Modem:
     def __init__(self, tty_name):
         self.ser = serial.Serial()
         self.ser.port = tty_name
-        self.ser.timeout = 0.01     # readline timeout in seconds
+        self.ser.timeout = 0.05     # readline timeout in seconds
         self.ser.baudrate = 115200  # baudrate
         self.ser.open()
         self.ser.flushInput()
@@ -61,7 +62,7 @@ class Modem:
                             'hsupa':                'AT+QCFG="hsupacat'}
         # # Set modem to provide to cell_ID
         if not self.set_modem('network_reg_set_opt2'):
-            print("WARNING: Modem set to report Cell-ID on request FAILED")
+            print("MODEM.py: WARNING: Modem set to report Cell-ID on request FAILED")
 
     def send_at_and_parse(self, cmd_str):
         params = {}
@@ -326,7 +327,7 @@ class Modem:
             cmd = self._commands[key] + "\r\n"
         else:
             # create exception..
-            print("key not recognized:" , key)
+            print("MODEM.py: Key not recognized:" , key)
             return []
         self.ser.write(cmd.encode())
         answers = []
@@ -339,9 +340,9 @@ class Modem:
                 if not answers and attempts < 5:
                     # time out and no received answers
                     if attempts == 5:
-                        print("Warning, no answer recevied within 5 timeouts")
+                        print("MODEM.py: Warning, no answer recevied within 5 timeouts")
                         break
-                    print("No response within timeout, try again. Attempts: ", attempts)
+                    #print("MODEM.py: No response within timeout, try again. Attempts: ", attempts)
                     attempts += 1
                     continue
                 # Complete response is already received
@@ -351,10 +352,10 @@ class Modem:
                 continue
             # Print to stdout on receiving ERROR
             if self.is_error(answer):
-                print("Received ERROR when sending ", self._commands[key])
+                print("MODEM.py: Received ERROR when sending ", self._commands[key])
             # Discart 'OK' from answer
             if self.is_ok(answer):
-                # Dont log th 'OK'
+                # Dont log the 'OK'
                 continue
             # Decode bytes to string
             decoded = answer.decode()
@@ -371,7 +372,7 @@ class Modem:
             cmd = self._commands[key] + "\r\n"
         else:
             # create exception..
-            print("key not recognized:" , key)
+            print("MODEM.py: Key not recognized:" , key)
             return False
         self.ser.write(cmd.encode())
         answers = []
@@ -383,9 +384,9 @@ class Modem:
                 if not answers and attempts < 5:
                     # time out and no received answers
                     if attempts == 5:
-                        print("Warning, no answer recevied within 5 timeouts")
+                        print("MODEM.py: Warning, no answer recevied within 5 timeouts")
                         break
-                    print("No response within timeout, try again. Attempts: ", attempts)
+                    #print("MODEM.py: No response within timeout, try again. Attempts: ", attempts)
                     attempts += 1
                     continue
                 # Complete response is already received

@@ -1,0 +1,37 @@
+{
+    "perimeter control": {
+        "id0": {
+            "lat": 58.410129533358926,
+            "lon": 15.658494404048156,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id1": {
+            "lat": 58.41029522,
+            "lon": 15.65807364,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id2": {
+            "lat": 58.40959775,
+            "lon": 15.65694897,
+            "alt": 20,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        },
+        "id3": {
+            "lat": 58.409311287459836,
+            "lon": 15.657188363585874,
+            "alt": 10,
+            "heading": "course",
+            "alt_type": "relative",
+            "speed": 5.0
+        }
+    },
+    "source_file": "USSP_SAAB_mavic.plan"
+}
