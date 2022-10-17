@@ -1,0 +1,19 @@
+{
+    "id0": {
+        "lat": 58.38825737644909,
+        "lon": 13.481121210496298,
+        "alt": 50,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 4.0
+    },
+    "id1": {
+        "lat": 58.388556218954164,
+        "lon": 13.488152229221754,
+        "alt": 50,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 4.0
+    },
+    "source_file": "../missions/road_ref_skara.plan"
+}
