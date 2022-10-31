@@ -2,7 +2,7 @@
     "id0": {
         "lat": 58.38825962891127,
         "lon": 13.481215750505328,
-        "alt": 50,
+        "alt": 25,
         "heading": "course",
         "alt_type": "relative",
         "speed": 4.0
@@ -10,7 +10,7 @@
     "id1": {
         "lat": 58.38854508841001,
         "lon": 13.487854936776245,
-        "alt": 50,
+        "alt": 25,
         "heading": "course",
         "alt_type": "relative",
         "speed": 4.0
