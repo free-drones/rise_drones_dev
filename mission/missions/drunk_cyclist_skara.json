@@ -1,0 +1,35 @@
+{
+    "id0": {
+        "lat": 58.38820705101713,
+        "lon": 13.479759970348255,
+        "alt": 2,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 4.0
+    },
+    "id1": {
+        "lat": 58.388568818210814,
+        "lon": 13.484072293530176,
+        "alt": 2,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 4.0
+    },
+    "id2": {
+        "lat": 58.388588660025064,
+        "lon": 13.488602012331256,
+        "alt": 2,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 4.0
+    },
+    "id3": {
+        "lat": 58.388196933504375,
+        "lon": 13.479740442993943,
+        "alt": 2,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 4.0
+    },
+    "source_file": "../missions/drunk_cyclist_skara.plan"
+}

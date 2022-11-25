@@ -1,5 +1,4 @@
 {
-    "perimeter control": {
         "id0": {
             "lat": 58.410129533358926,
             "lon": 15.658494404048156,
@@ -32,6 +31,4 @@
             "alt_type": "relative",
             "speed": 5.0
         }
-    },
-    "source_file": "USSP_SAAB_mavic.plan"
 }
