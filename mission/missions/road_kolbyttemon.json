@@ -1,15 +1,15 @@
 {
     "id0": {
-        "lat": 58.32320814303203,
-        "lon": 15.638684217504306,
+        "lat": 58.3232779,
+        "lon": 15.6386989,
         "alt": 50,
         "heading": "course",
         "alt_type": "relative",
         "speed": 5.0
     },
     "id1": {
-        "lat": 58.32207599,
-        "lon": 15.63889621,
+        "lat": 58.3219400,
+        "lon": 15.6389538,
         "alt": 50,
         "heading": "course",
         "alt_type": "relative",

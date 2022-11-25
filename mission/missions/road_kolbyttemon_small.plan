@@ -16,7 +16,7 @@
         "items": [
             {
                 "AMSLAltAboveTerrain": null,
-                "Altitude": 50,
+                "Altitude": 25,
                 "AltitudeMode": 1,
                 "autoContinue": true,
                 "command": 22,
@@ -29,13 +29,13 @@
                     null,
                     0,
                     0,
-                    50
+                    25
                 ],
                 "type": "SimpleItem"
             },
             {
                 "AMSLAltAboveTerrain": null,
-                "Altitude": 50,
+                "Altitude": 25,
                 "AltitudeMode": 1,
                 "autoContinue": true,
                 "command": 16,
@@ -48,7 +48,7 @@
                     null,
                     58.32776674444893,
                     15.63686630803494,
-                    50
+                    25
                 ],
                 "type": "SimpleItem"
             },

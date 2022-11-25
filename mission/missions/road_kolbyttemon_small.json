@@ -2,18 +2,18 @@
     "id0": {
         "lat": 58.32776674444893,
         "lon": 15.63686630803494,
-        "alt": 50,
-        "heading": "course",
-        "alt_type": "relative",
-        "speed": 0
-    },
-    "id1": {
-        "lat": 58.32761798,
-        "lon": 15.63666828,
         "alt": 25,
         "heading": "course",
         "alt_type": "relative",
         "speed": 0
     },
-    "source_file": "missions/road_kolbyttemon_small.plan"
+    "id1": {
+        "lat": 58.3275473,
+        "lon": 15.6365881,
+        "alt": 25,
+        "heading": "course",
+        "alt_type": "relative",
+        "speed": 0
+    },
+    "source_file": "road_kolbyttemon_small.plan"
 }
